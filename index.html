@@ -70,178 +70,47 @@
       align-items: center;
       justify-content: center;
     }
-    .hero-label {
-      font-family: sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: normal;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-    }
+    .hero-label { font-family: sans-serif; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: normal; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
     .hero h1 span { color: var(--gold); }
     .hero-sub { font-size: 1.1rem; color: #c4d8a8; margin-bottom: 2rem; }
-    .hero-intro {
-      max-width: 580px;
-      margin: 0 auto 2.5rem;
-      font-size: 1.05rem;
-      color: #e4e8d8;
-      line-height: 1.85;
-    }
+    .hero-intro { max-width: 580px; margin: 0 auto 2.5rem; font-size: 1.05rem; color: #e4e8d8; line-height: 1.85; }
     .hero-sig { font-style: italic; color: var(--gold); font-size: 1rem; }
 
-    .photo-strip {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      height: 240px;
-      overflow: hidden;
-    }
+    .photo-strip { display: grid; grid-template-columns: repeat(5, 1fr); height: 240px; overflow: hidden; }
     .ps-item { position: relative; overflow: hidden; cursor: pointer; }
-    .ps-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-      display: block;
-    }
+    .ps-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
     .ps-item:hover img { transform: scale(1.07); }
-    .ps-item .ps-label {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(26,37,21,0.82));
-      color: var(--gold);
-      font-family: sans-serif;
-      font-size: 0.62rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      padding: 1rem 0.5rem 0.5rem;
-      text-align: center;
-    }
+    .ps-item .ps-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(26,37,21,0.82)); color: var(--gold); font-family: sans-serif; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 1rem 0.5rem 0.5rem; text-align: center; }
 
-    .toc {
-      background: var(--warm);
-      padding: 3rem 2rem;
-      text-align: center;
-      border-bottom: 1px solid #ccdfc4;
-    }
-    .toc-label {
-      font-family: sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-bottom: 1.5rem;
-    }
-    .toc-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .toc-item {
-      background: white;
-      border: 1px solid #c0d8b4;
-      border-radius: 4px;
-      padding: 0.8rem 1.4rem;
-      text-decoration: none;
-      color: var(--dark);
-      font-family: sans-serif;
-      font-size: 0.85rem;
-      transition: all 0.2s;
-    }
+    .toc { background: var(--warm); padding: 3rem 2rem; text-align: center; border-bottom: 1px solid #ccdfc4; }
+    .toc-label { font-family: sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 1.5rem; }
+    .toc-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 800px; margin: 0 auto; }
+    .toc-item { background: white; border: 1px solid #c0d8b4; border-radius: 4px; padding: 0.8rem 1.4rem; text-decoration: none; color: var(--dark); font-family: sans-serif; font-size: 0.85rem; transition: all 0.2s; }
     .toc-item:hover { background: var(--accent); color: white; border-color: var(--accent); }
     .toc-item .num { display: block; font-size: 0.7rem; color: var(--accent); margin-bottom: 0.2rem; }
     .toc-item:hover .num { color: rgba(255,255,255,0.7); }
 
-    .section-photo {
-      width: 100%;
-      max-width: 860px;
-      margin: 0 auto;
-      height: 300px;
-      overflow: hidden;
-      position: relative;
-    }
+    .section-photo { width: 100%; max-width: 860px; margin: 0 auto; height: 300px; overflow: hidden; position: relative; }
     .section-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-    .section-photo::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 60px;
-      background: linear-gradient(transparent, var(--light));
-    }
+    .section-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(transparent, var(--light)); }
 
-    section {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-      border-bottom: 1px solid #dcebd4;
-    }
+    section { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; border-bottom: 1px solid #dcebd4; }
     section:last-of-type { border-bottom: none; }
-    .section-label {
-      font-family: sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
+    .section-label { font-family: sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
     h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: normal; color: var(--dark); margin-bottom: 1rem; }
-    h3 {
-      font-size: 1.15rem;
-      font-weight: normal;
-      color: var(--mid);
-      margin: 2rem 0 0.5rem;
-      padding-bottom: 0.3rem;
-      border-bottom: 1px solid #c4dbb8;
-    }
+    h3 { font-size: 1.15rem; font-weight: normal; color: var(--mid); margin: 2rem 0 0.5rem; padding-bottom: 0.3rem; border-bottom: 1px solid #c4dbb8; }
     h4 { font-size: 1rem; font-weight: bold; color: var(--dark); margin: 1.5rem 0 0.3rem; }
     p { margin-bottom: 0.8rem; color: var(--mid); }
     .lead { font-size: 1.05rem; color: var(--dark); margin-bottom: 1.5rem; }
 
-    .gpx-box {
-      background: white;
-      border: 1px solid #c0d8b4;
-      border-left: 4px solid var(--accent);
-      border-radius: 4px;
-      padding: 1rem 1.4rem;
-      margin: 1.5rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .gpx-box { background: white; border: 1px solid #c0d8b4; border-left: 4px solid var(--accent); border-radius: 4px; padding: 1rem 1.4rem; margin: 1.5rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
     .gpx-box-text { font-family: sans-serif; font-size: 0.85rem; color: var(--mid); }
     .gpx-box-text strong { display: block; color: var(--dark); font-size: 0.88rem; margin-bottom: 0.2rem; }
-    .gpx-btn {
-      background: var(--accent);
-      color: white;
-      padding: 0.5rem 1.1rem;
-      border-radius: 3px;
-      text-decoration: none;
-      font-family: sans-serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-      transition: background 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
+    .gpx-btn { background: var(--accent); color: white; padding: 0.5rem 1.1rem; border-radius: 3px; text-decoration: none; font-family: sans-serif; font-size: 0.78rem; letter-spacing: 0.04em; white-space: nowrap; transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.4rem; }
     .gpx-btn:hover { background: var(--dark); }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
     .card { background: white; border: 1px solid #d0e4c8; border-radius: 6px; padding: 1.2rem 1.4rem; }
     .card-title { font-size: 1rem; font-weight: bold; color: var(--dark); margin-bottom: 0.4rem; }
     .card-title .fav { color: var(--terracotta); }
@@ -251,23 +120,13 @@
     .card-meta a:hover { text-decoration: underline; }
 
     .climb-list { margin-top: 1.5rem; }
-    .climb-item {
-      display: grid;
-      grid-template-columns: 2rem 1fr auto;
-      gap: 0.8rem;
-      align-items: baseline;
-      padding: 0.8rem 0;
-      border-bottom: 1px solid #e4f0dc;
-    }
+    .climb-item { display: grid; grid-template-columns: 2rem 1fr auto; gap: 0.8rem; align-items: baseline; padding: 0.8rem 0; border-bottom: 1px solid #e4f0dc; }
     .climb-num { font-family: sans-serif; font-size: 0.75rem; color: var(--accent); font-weight: bold; }
     .climb-name { font-size: 1rem; color: var(--dark); }
     .climb-stats { font-family: sans-serif; font-size: 0.78rem; color: #7a9870; text-align: right; }
 
     .route-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-family: sans-serif; font-size: 0.85rem; }
-    .route-table th {
-      text-align: left; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent); padding: 0.5rem 0.8rem; border-bottom: 2px solid #c0d8b4;
-    }
+    .route-table th { text-align: left; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); padding: 0.5rem 0.8rem; border-bottom: 2px solid #c0d8b4; }
     .route-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #e4f0dc; color: var(--mid); }
     .route-table tr:hover td { background: var(--warm); }
 
@@ -280,7 +139,6 @@
     .place-card { background: white; border: 1px solid #d0e4c8; border-radius: 6px; padding: 1.2rem; }
     .place-card h4 { margin-top: 0; font-size: 0.95rem; color: var(--dark); }
     .place-card p { font-size: 0.88rem; margin-bottom: 0.4rem; }
-
     .transport-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
     .transport-card { background: white; border-left: 3px solid var(--accent); padding: 1rem 1.2rem; }
     .transport-card h4 { margin-top: 0; font-size: 0.95rem; }
@@ -337,26 +195,11 @@
 </div>
 
 <div class="photo-strip">
-  <div class="ps-item">
-    <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANWi0xQQgPyFmtMRLRjotYs/House/img_6325%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Casa Hammerby tagterrasse" loading="lazy">
-    <div class="ps-label">Huset</div>
-  </div>
-  <div class="ps-item">
-    <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANX9oW-F1JEwzEsQxXq8Jfg/Places/IMG_2142.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Fornalutx landsby" loading="lazy">
-    <div class="ps-label">Steder</div>
-  </div>
-  <div class="ps-item">
-    <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AKUhjFPJui8MJqCODExyseI/Eating/img_7481%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Mad i Fornalutx" loading="lazy">
-    <div class="ps-label">Mad</div>
-  </div>
-  <div class="ps-item">
-    <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AGtVWILIWg6YJhKhWG2zswU/Bike/IMG_4875.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Sa Calobra cykelrute" loading="lazy">
-    <div class="ps-label">Cykling</div>
-  </div>
-  <div class="ps-item">
-    <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANQFOvBV0iEwDHPyXU6fXt0/Hike/img_7395%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Port de Sóller fra oven" loading="lazy">
-    <div class="ps-label">Vandring</div>
-  </div>
+  <div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANWi0xQQgPyFmtMRLRjotYs/House/img_6325%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Casa Hammerby tagterrasse" loading="lazy"><div class="ps-label">Huset</div></div>
+  <div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANX9oW-F1JEwzEsQxXq8Jfg/Places/IMG_2142.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Fornalutx landsby" loading="lazy"><div class="ps-label">Steder</div></div>
+  <div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AKUhjFPJui8MJqCODExyseI/Eating/img_7481%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Mad i Fornalutx" loading="lazy"><div class="ps-label">Mad</div></div>
+  <div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AGtVWILIWg6YJhKhWG2zswU/Bike/IMG_4875.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Sa Calobra cykelrute" loading="lazy"><div class="ps-label">Cykling</div></div>
+  <div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANQFOvBV0iEwDHPyXU6fXt0/Hike/img_7395%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Port de Sóller fra oven" loading="lazy"><div class="ps-label">Vandring</div></div>
 </div>
 
 <div class="toc">
@@ -371,9 +214,7 @@
   </div>
 </div>
 
-<div class="section-photo">
-  <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANWi0xQQgPyFmtMRLRjotYs/House/img_6325%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Casa Hammerby tagterrasse" loading="lazy">
-</div>
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANWi0xQQgPyFmtMRLRjotYs/House/img_6325%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Casa Hammerby tagterrasse" loading="lazy"></div>
 <section id="huset">
   <p class="section-label">01 — Casa Hammerby</p>
   <h2>Vores hus i Fornalutx</h2>
@@ -401,93 +242,54 @@
       <tr><td>December</td><td>11–16°</td><td>★</td><td>Julestemning i bjergene</td></tr>
     </tbody>
   </table>
-  <p style="margin-top:0.8rem;font-style:italic;font-size:0.9rem;">Vores personlige anbefaling: Maj og oktober er de måneder hvor øen er sig selv. Februar og marts er perfekte for cykelentusiaster — professionelle hold træner her netop da.</p>
+  <p style="margin-top:0.8rem;font-style:italic;font-size:0.9rem;">Vores personlige anbefaling: Maj og oktober er de måneder hvor øen er sig selv. Februar og marts er perfekte for cykelentusiaster.</p>
   <h3>Transport til og fra Fornalutx</h3>
   <div class="transport-grid">
-    <div class="transport-card">
-      <h4>🚂 Trætoget Palma → Sóller</h4>
-      <p>Ferrocarril de Sóller — et af Mallorcas bedste oplevelser. Afgår fra Plaça Espanya.</p>
-      <p class="card-meta"><a href="https://trendesoller.com" target="_blank">trendesoller.com</a></p>
-    </div>
-    <div class="transport-card">
-      <h4>🚃 Sporvogn Sóller → Port de Sóller</h4>
-      <p>Den gamle træsporvogn kører frem og tilbage — perfekt til en eftermiddag uden program.</p>
-    </div>
-    <div class="transport-card">
-      <h4>🚌 Bus</h4>
-      <p>Fra Fornalutx til Port de Sóller, Deià, Valldemossa og Palma. En af de smukkeste ruter på Mallorca.</p>
-      <p class="card-meta"><a href="https://tib.org/bus" target="_blank">tib.org/bus</a></p>
-    </div>
-    <div class="transport-card">
-      <h4>🚕 Taxa 1 Fornalutx</h4>
-      <p>Vores faste taxa. Kendte, pålidelige og kender hvert sving.</p>
-      <p class="card-meta">WhatsApp: <a href="https://wa.me/34615595963" target="_blank">+34 615 59 59 63</a></p>
-    </div>
+    <div class="transport-card"><h4>🚂 Trætoget Palma → Sóller</h4><p>Ferrocarril de Sóller — et af Mallorcas bedste oplevelser. Afgår fra Plaça Espanya.</p><p class="card-meta"><a href="https://trendesoller.com" target="_blank">trendesoller.com</a></p></div>
+    <div class="transport-card"><h4>🚃 Sporvogn Sóller → Port de Sóller</h4><p>Den gamle træsporvogn kører frem og tilbage — perfekt til en eftermiddag uden program.</p></div>
+    <div class="transport-card"><h4>🚌 Bus</h4><p>Fra Fornalutx til Port de Sóller, Deià, Valldemossa og Palma. En af de smukkeste ruter på Mallorca.</p><p class="card-meta"><a href="https://tib.org/bus" target="_blank">tib.org/bus</a></p></div>
+    <div class="transport-card"><h4>🚕 Taxa 1 Fornalutx</h4><p>Vores faste taxa. Kender hvert eneste sving.</p><p class="card-meta">WhatsApp: <a href="https://wa.me/34615595963" target="_blank">+34 615 59 59 63</a></p></div>
   </div>
   <h3>Hoteller i lokalområdet</h3>
   <div class="card-grid">
-    <div class="card">
-      <div class="card-title">Hotel Can Verdera</div>
-      <p>Boutique-hotel i traditionelt stenhus. Kun voksne. Pool og restaurant Ritma.</p>
-      <div class="card-meta">Fornalutx · <a href="https://hotelcanverdera.com" target="_blank">hotelcanverdera.com</a></div>
-    </div>
-    <div class="card">
-      <div class="card-title">Fornalutx Petit Hotel</div>
-      <p>Charmerende hotel i gammelt kloster. Kapellet er nu hotellets bedste suite.</p>
-      <div class="card-meta">Calle Alba 22 · <a href="https://petit.hotels-of-mallorca.com" target="_blank">petit.hotels-of-mallorca.com</a></div>
-    </div>
-    <div class="card">
-      <div class="card-title">Sa Tanqueta de Fornalutx</div>
-      <p>Familiedrevet, kun voksne. 14 lejligheder. Saltvandpool med bjergudsigt.</p>
-      <div class="card-meta"><a href="https://sa-tanqueta.com" target="_blank">sa-tanqueta.com</a></div>
-    </div>
-    <div class="card">
-      <div class="card-title">Finca Ca's Sant</div>
-      <p>Finca-hotel i 750 år. 700+ appelsin- og citrontræer. To pools.</p>
-      <div class="card-meta">Sóller · <a href="https://cas-sant.com" target="_blank">cas-sant.com</a></div>
-    </div>
-    <div class="card">
-      <div class="card-title">The Salvia</div>
-      <p>Kun voksne. 7 værelser i restaureret købmandshus fra 1800-tallet.</p>
-      <div class="card-meta">Calle de la Palma 18, Sóller · <a href="https://hotelsalvia.com" target="_blank">hotelsalvia.com</a></div>
-    </div>
+    <div class="card"><div class="card-title">Hotel Can Verdera</div><p>Boutique-hotel i traditionelt stenhus. Kun voksne. Pool og restaurant Ritma.</p><div class="card-meta">Fornalutx · <a href="https://hotelcanverdera.com" target="_blank">hotelcanverdera.com</a></div></div>
+    <div class="card"><div class="card-title">Fornalutx Petit Hotel</div><p>Charmerende hotel i gammelt kloster. Kapellet er nu hotellets bedste suite.</p><div class="card-meta">Calle Alba 22 · <a href="https://petit.hotels-of-mallorca.com" target="_blank">petit.hotels-of-mallorca.com</a></div></div>
+    <div class="card"><div class="card-title">Sa Tanqueta de Fornalutx</div><p>Familiedrevet, kun voksne. Saltvandpool med bjergudsigt.</p><div class="card-meta"><a href="https://sa-tanqueta.com" target="_blank">sa-tanqueta.com</a></div></div>
+    <div class="card"><div class="card-title">Finca Ca's Sant</div><p>700+ appelsin- og citrontræer. To pools. 600m fra torvet.</p><div class="card-meta">Sóller · <a href="https://cas-sant.com" target="_blank">cas-sant.com</a></div></div>
+    <div class="card"><div class="card-title">The Salvia</div><p>Kun voksne. 7 værelser i restaureret købmandshus fra 1800-tallet.</p><div class="card-meta">Calle de la Palma 18, Sóller · <a href="https://hotelsalvia.com" target="_blank">hotelsalvia.com</a></div></div>
   </div>
 </section>
 
-<div class="section-photo">
-  <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ALzdmcEuq_66u711h9TzKd4/Places/IMG_2074%202.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Morgendis over Sóller-dalen" loading="lazy">
-</div>
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ALzdmcEuq_66u711h9TzKd4/Places/IMG_2074%202.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Morgendis over Sóller-dalen" loading="lazy"></div>
 <section id="steder">
   <p class="section-label">02 — Steder at se</p>
   <h2>Tramuntana</h2>
   <p class="lead">Mallorcas nordvestkyst er noget for sig. Tramuntana-bjergene, citruslunde, gamle stenhuse og landsbyer hvor ingen har travlt.</p>
   <div class="place-grid">
     <div class="place-card"><h4>Fornalutx</h4><p>Kåret til en af Spaniens smukkeste landsbyer. Brolagte gader, stentrapper, appelsintræer der læner sig ind over murene.</p></div>
-    <div class="place-card"><h4>Sóller</h4><p>I bunden af den gyldne dal. Modernistiske bygninger og barokkirke fra citrusindustriens storhedstid. Trætoget fra Palma er værd at prøve.</p></div>
-    <div class="place-card"><h4>Biniaraix</h4><p>Lille landsby 20 min. til fods fra Fornalutx. Herfra starter den stenlagte sti Barranc de Biniaraix.</p></div>
-    <div class="place-card"><h4>Port de Sóller</h4><p>Havnebyen ved bugten. Grønne bjerge, villaer på skråningerne og træsporvogn til Sóller.</p></div>
+    <div class="place-card"><h4>Sóller</h4><p>I bunden af den gyldne dal. Modernistiske bygninger fra citrusindustriens storhedstid. Trætoget fra Palma er værd at prøve.</p></div>
+    <div class="place-card"><h4>Biniaraix</h4><p>20 min. til fods fra Fornalutx. Herfra starter den stenlagte sti Barranc de Biniaraix.</p></div>
+    <div class="place-card"><h4>Port de Sóller</h4><p>Havnebyen ved bugten. Grønne bjerge og træsporvogn til Sóller.</p></div>
     <div class="place-card"><h4>Deià</h4><p>Robert Graves slog sig ned her i 1929. Gå ned til Cala Deià for en svømmetur.</p></div>
-    <div class="place-card"><h4>Valldemossa</h4><p>Karteuserkloster fra det 14. århundrede. Chopin og George Sand tilbragte vinteren 1838 her. UNESCO-listet.</p></div>
+    <div class="place-card"><h4>Valldemossa</h4><p>Karteuserkloster fra det 14. århundrede. Chopin og George Sand, 1838. UNESCO-listet.</p></div>
     <div class="place-card"><h4>Sa Calobra</h4><p>Cykl ned ad den berømte snoningsvej — eller tag båden fra Port de Sóller.</p><p class="card-meta"><a href="https://barcoscalobra.com" target="_blank">barcoscalobra.com</a></p></div>
     <div class="place-card"><h4>Mirador ses Barques</h4><p>Udsigtspunkt 6 km ovenfor Fornalutx. Restaurant heroppe. Særligt godt ved solnedgang.</p></div>
-    <div class="place-card"><h4>Palma — Katedralen</h4><p>La Seu fra det 13. århundrede. Et af Europas smukkeste gotiske katedraler — gå ind.</p></div>
+    <div class="place-card"><h4>Palma — Katedralen</h4><p>La Seu fra det 13. århundrede. Et af Europas smukkeste gotiske katedraler.</p></div>
     <div class="place-card"><h4>Lluc</h4><p>Kloster fra det 13. århundrede, 525 m oppe. Godt udgangspunkt for vandreture.</p></div>
   </div>
 </section>
 
-<div class="section-photo">
-  <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AKUhjFPJui8MJqCODExyseI/Eating/img_7481%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Mad i Fornalutx" loading="lazy" style="object-position: center 30%;">
-</div>
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AKUhjFPJui8MJqCODExyseI/Eating/img_7481%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Mad i Fornalutx" loading="lazy" style="object-position: center 30%;"></div>
 <section id="mad">
   <p class="section-label">03 — Mad</p>
   <h2>Spisesteder</h2>
   <p class="lead">Her er de steder vi selv spiser — sorteret efter område. <span style="color:var(--terracotta)">★</span> er vores absolutte favoritter.</p>
   <h3>Fornalutx</h3>
   <div class="card-grid">
-    <div class="card"><div class="card-title">Café Med <span class="fav">★</span></div><p>400 år gammelt stenhus ved pladsen. Nok det tætteste på fine dining i Fornalutx. Book 2-3 dage i forvejen.</p><div class="card-meta"><a href="https://cafemedmallorca.com" target="_blank">cafemedmallorca.com</a></div></div>
-    <div class="card"><div class="card-title">Ritma <span class="fav">★</span></div><p>Vores favorit. På Hotel Can Verdera, drives af kok Marcos Servera. Sæsonbaseret mallorcinsk-galicisk køkken.</p><div class="card-meta"><a href="https://ritmamallorca.com" target="_blank">ritmamallorca.com</a></div></div>
-    <div class="card"><div class="card-title">Bar Deportivo <span class="fav">★</span></div><p>Landsbybaren på pladsen. En kold øl eller kaffe. Her mødes de lokale.</p></div>
-    <div class="card"><div class="card-title">Es Turó</div><p>Familiedrevet, traditionel mallorcinsk mad. God udsigt fra terrassen.</p><div class="card-meta"><a href="https://restaurante-esturo-fornalutx.com" target="_blank">restaurante-esturo-fornalutx.com</a></div></div>
+    <div class="card"><div class="card-title">Café Med <span class="fav">★</span></div><p>400 år gammelt stenhus ved pladsen. Nok det tætteste på fine dining i Fornalutx. Book 2-3 dage i forvejen.</p><div class="card-meta">Calle de sa Plaça 7 · <a href="https://cafemedmallorca.com" target="_blank">cafemedmallorca.com</a></div></div>
+    <div class="card"><div class="card-title">Ritma <span class="fav">★</span></div><p>Vores favorit. På Hotel Can Verdera, drives af kok Marcos Servera.</p><div class="card-meta">Carrer des Toros 1 · <a href="https://ritmamallorca.com" target="_blank">ritmamallorca.com</a></div></div>
+    <div class="card"><div class="card-title">Bar Deportivo <span class="fav">★</span></div><p>Landsbybaren på pladsen. Her mødes de lokale.</p></div>
+    <div class="card"><div class="card-title">Es Turó</div><p>Familiedrevet mallorcinsk mad. God udsigt fra terrassen.</p><div class="card-meta"><a href="https://restaurante-esturo-fornalutx.com" target="_blank">restaurante-esturo-fornalutx.com</a></div></div>
     <div class="card"><div class="card-title">Ca N'Antuna</div><p>Den ældste restaurant i Fornalutx — samme familie i over 50 år. Prøv pattegrisen fra spiddet.</p></div>
   </div>
   <h3>Biniaraix</h3>
@@ -496,10 +298,10 @@
   </div>
   <h3>Sóller</h3>
   <div class="card-grid">
-    <div class="card"><div class="card-title">La Romaguera <span class="fav">★</span></div><p>Yndlings tapas sted — klassisk tapas et nøk opad. Book bord udenfor.</p></div>
+    <div class="card"><div class="card-title">La Romaguera <span class="fav">★</span></div><p>Yndlings tapas sted — et nøk opad. Book bord udenfor.</p></div>
     <div class="card"><div class="card-title">Luna 36 <span class="fav">★</span></div><p>Moderne middelhavskøkken i ombygget chokoladefabrik. Hjemmelavet pasta er et must.</p><div class="card-meta"><a href="https://luna36.es" target="_blank">luna36.es</a></div></div>
-    <div class="card"><div class="card-title">Ca'n Boqueta <span class="fav">★</span></div><p>Michelin BIB Gourmand. Sæsonbestemte smagsmenuer — bare stol på kokken.</p><div class="card-meta"><a href="https://canboqueta.com" target="_blank">canboqueta.com</a></div></div>
-    <div class="card"><div class="card-title">Café Sóller</div><p>Vores bedste bud på torvet — god brasserie-mad og eget bageri.</p><div class="card-meta"><a href="https://cafesoller.com" target="_blank">cafesoller.com</a></div></div>
+    <div class="card"><div class="card-title">Ca'n Boqueta <span class="fav">★</span></div><p>Michelin BIB Gourmand. Sæsonbestemte smagsmenuer.</p><div class="card-meta"><a href="https://canboqueta.com" target="_blank">canboqueta.com</a></div></div>
+    <div class="card"><div class="card-title">Café Sóller</div><p>God brasserie-mad, eget bageri og bedste terrasse på torvet.</p><div class="card-meta"><a href="https://cafesoller.com" target="_blank">cafesoller.com</a></div></div>
     <div class="card"><div class="card-title">Casa Alvaro</div><p>Gourmet-tapas i sidegade nær torvet. Book bord online.</p><div class="card-meta"><a href="https://casalvaro.com" target="_blank">casalvaro.com</a></div></div>
     <div class="card"><div class="card-title">El Petit Bistro</div><p>Moderne bistro på torvet. Fine dining-ambitioner i afslappede rammer.</p><div class="card-meta"><a href="https://petitbistrosoller.com" target="_blank">petitbistrosoller.com</a></div></div>
   </div>
@@ -508,7 +310,7 @@
     <div class="card"><div class="card-title">Neni <span class="fav">★</span></div><p>Mellemøstlig-inspireret på taget af Bikini Hotel. Fed stemning. Reservér bord.</p><div class="card-meta"><a href="https://nenifood.com" target="_blank">nenifood.com</a></div></div>
     <div class="card"><div class="card-title">Villa Luisa</div><p>Restaureret villa fra 1900 ved stranden. Josper-grillet fisk og kød.</p><div class="card-meta"><a href="https://villaluisasoller.com" target="_blank">villaluisasoller.com</a></div></div>
     <div class="card"><div class="card-title">Randemar</div><p>Gammelt mallorcinsk hus på havnefronten. God cocktailmenu.</p><div class="card-meta"><a href="https://randemar.com" target="_blank">randemar.com</a></div></div>
-    <div class="card"><div class="card-title">Cap Roig Brasserie</div><p>På Jumeirah-hotellet med udsigt over havet. Time det med solnedgangen.</p></div>
+    <div class="card"><div class="card-title">Cap Roig Brasserie</div><p>På Jumeirah-hotellet. Time det med solnedgangen.</p></div>
   </div>
   <h3>Selva</h3>
   <div class="card-grid">
@@ -529,32 +331,27 @@
   </div>
 </section>
 
-<div class="section-photo">
-  <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AGtVWILIWg6YJhKhWG2zswU/Bike/IMG_4875.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Sa Calobra — den ikoniske snoningsvej" loading="lazy">
-</div>
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AGtVWILIWg6YJhKhWG2zswU/Bike/IMG_4875.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Sa Calobra — den ikoniske snoningsvej" loading="lazy"></div>
 <section id="cykling">
   <p class="section-label">04 — Cykling</p>
   <h2>Cykling i Tramuntana</h2>
   <p class="lead">10 af de bedste stigninger på øen — alle kan køres fra Sóller-dalen som base.</p>
   <div class="gpx-box">
-    <div class="gpx-box-text">
-      <strong>📥 Download GPX-filer — Cykelruter</strong>
-      16 ruter fra Sóller-dalen. Klar til Garmin, Wahoo og Komoot.
-    </div>
+    <div class="gpx-box-text"><strong>📥 Download GPX-filer — Cykelruter</strong>16 ruter fra Sóller-dalen. Klar til Garmin, Wahoo og Komoot.</div>
     <a class="gpx-btn" href="https://www.dropbox.com/scl/fo/udps0z3ummbux46s0jcij/AFM6p7xfo7WYwjAW3nhHbKU?rlkey=dwrw42obw8uktzqcshtndopnp&dl=0" target="_blank">↓ Hent GPX-filer</a>
   </div>
   <h3>Top 10 stigninger på Mallorca</h3>
   <div class="climb-list">
-    <div class="climb-item"><span class="climb-num">1</span><span class="climb-name"><strong>Sa Calobra</strong> — Den store. En af verdens mest bemærkelsesværdige veje.</span><span class="climb-stats">10,2 km · 703 hm · 6,9% gns</span></div>
-    <div class="climb-item"><span class="climb-num">2</span><span class="climb-name"><strong>Puig Major</strong> — Mallorcas højeste bjerg. Nedkørslen til Lluc er en af øens bedste.</span><span class="climb-stats">14,6 km · 860 hm · 5,9% gns</span></div>
-    <div class="climb-item"><span class="climb-num">3</span><span class="climb-name"><strong>Coll de Femenia</strong> — Åbner adgang til resten af Tramuntana.</span><span class="climb-stats">7,7 km · 420 hm · 5,5% gns</span></div>
-    <div class="climb-item"><span class="climb-num">4</span><span class="climb-name"><strong>Coll de Sóller</strong> — 29 sving op fra Sóller-siden. Kør IKKE ind i tunnelen mod Palma.</span><span class="climb-stats">7,5 km · 430 hm · 5,7% gns</span></div>
-    <div class="climb-item"><span class="climb-num">5</span><span class="climb-name"><strong>Coll de sa Batalla</strong> — Tankstation-restaurant på toppen med obligatorisk is.</span><span class="climb-stats">7,9 km · 391 hm · 4,9% gns</span></div>
-    <div class="climb-item"><span class="climb-num">6</span><span class="climb-name"><strong>Puig de Randa</strong> — Kloster og cafébar på toppen. Populær hos Team INEOS.</span><span class="climb-stats">5,5 km · 337 hm · 6,1% gns</span></div>
+    <div class="climb-item"><span class="climb-num">1</span><span class="climb-name"><strong>Sa Calobra</strong> — Den store. En af verdens mest bemærkelsesværdige veje.</span><span class="climb-stats">10,2 km · 703 hm · 6,9%</span></div>
+    <div class="climb-item"><span class="climb-num">2</span><span class="climb-name"><strong>Puig Major</strong> — Mallorcas højeste bjerg. Nedkørslen til Lluc er en af øens bedste.</span><span class="climb-stats">14,6 km · 860 hm · 5,9%</span></div>
+    <div class="climb-item"><span class="climb-num">3</span><span class="climb-name"><strong>Coll de Femenia</strong> — Åbner adgang til resten af Tramuntana.</span><span class="climb-stats">7,7 km · 420 hm · 5,5%</span></div>
+    <div class="climb-item"><span class="climb-num">4</span><span class="climb-name"><strong>Coll de Sóller</strong> — 29 sving op fra Sóller-siden. Kør IKKE ind i tunnelen mod Palma.</span><span class="climb-stats">7,5 km · 430 hm · 5,7%</span></div>
+    <div class="climb-item"><span class="climb-num">5</span><span class="climb-name"><strong>Coll de sa Batalla</strong> — Tankstation-restaurant på toppen med obligatorisk is.</span><span class="climb-stats">7,9 km · 391 hm · 4,9%</span></div>
+    <div class="climb-item"><span class="climb-num">6</span><span class="climb-name"><strong>Puig de Randa</strong> — Kloster og cafébar på toppen. Populær hos Team INEOS.</span><span class="climb-stats">5,5 km · 337 hm · 6,1%</span></div>
     <div class="climb-item"><span class="climb-num">7</span><span class="climb-name"><strong>Formentor fyrtårn</strong> — Fire stigninger i alt ud og hjem. Pas på gederne.</span><span class="climb-stats">17,7 km · 590 hm</span></div>
-    <div class="climb-item"><span class="climb-num">8</span><span class="climb-name"><strong>Coll d'Honor</strong> — Fra Bunyola. Færre hårnålekurve, mere træbeklædt.</span><span class="climb-stats">4,7 km · 297 hm · 6,2% gns</span></div>
-    <div class="climb-item"><span class="climb-num">9</span><span class="climb-name"><strong>Port de Valldemossa</strong> — Den hemmelige stigning. Næsten ingen trafik.</span><span class="climb-stats">5 km · 345 hm · 7% gns</span></div>
-    <div class="climb-item"><span class="climb-num">10</span><span class="climb-name"><strong>Coll d'Orient</strong> — Behagelig stigning. Orient på den anden side er postkort-smukt.</span><span class="climb-stats">5,2 km · 258 hm · 5,1% gns</span></div>
+    <div class="climb-item"><span class="climb-num">8</span><span class="climb-name"><strong>Coll d'Honor</strong> — Fra Bunyola. Færre hårnålekurve, mere træbeklædt.</span><span class="climb-stats">4,7 km · 297 hm · 6,2%</span></div>
+    <div class="climb-item"><span class="climb-num">9</span><span class="climb-name"><strong>Port de Valldemossa</strong> — Den hemmelige stigning. Næsten ingen trafik.</span><span class="climb-stats">5 km · 345 hm · 7%</span></div>
+    <div class="climb-item"><span class="climb-num">10</span><span class="climb-name"><strong>Coll d'Orient</strong> — Behagelig gradvis stigning. Orient på den anden side er postkort-smukt.</span><span class="climb-stats">5,2 km · 258 hm · 5,1%</span></div>
   </div>
   <h3>16 cykelruter fra Sóller-dalen</h3>
   <table class="route-table">
@@ -580,18 +377,13 @@
   </table>
 </section>
 
-<div class="section-photo">
-  <img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANQFOvBV0iEwDHPyXU6fXt0/Hike/img_7395%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Port de Sóller fra oven" loading="lazy">
-</div>
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANQFOvBV0iEwDHPyXU6fXt0/Hike/img_7395%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Port de Sóller fra oven" loading="lazy"></div>
 <section id="vandring">
   <p class="section-label">05 — Vandring</p>
   <h2>Vandreruter</h2>
   <p class="lead">Alle ruter starter fra Sóller-dalen. Serra de Tramuntana er UNESCO-verdensarv — og man forstår hvorfor.</p>
   <div class="gpx-box">
-    <div class="gpx-box-text">
-      <strong>📥 Download GPX-filer — Vandreruter</strong>
-      11 ruter inkl. Barranc de Biniaraix, Deià og Basin de Cuber.
-    </div>
+    <div class="gpx-box-text"><strong>📥 Download GPX-filer — Vandreruter</strong>11 ruter inkl. Barranc de Biniaraix, Deià og Basin de Cuber.</div>
     <a class="gpx-btn" href="https://www.dropbox.com/scl/fo/uzu360ebjk9nbl414aeyd/AFlPrlLaC0LpYuvmqXp58V8?rlkey=29tybd7hwwgos1ilsjn2ndyhi&dl=0" target="_blank">↓ Hent GPX-filer</a>
   </div>
   <table class="route-table">
@@ -617,10 +409,7 @@
   <h2>Trail running</h2>
   <p class="lead">Trail running i Tramuntana-bjergene. Alle ruter starter fra Sóller-dalen.</p>
   <div class="gpx-box">
-    <div class="gpx-box-text">
-      <strong>📥 Download GPX-filer — Løberuter</strong>
-      6 ruter fra Biniaraix Loop til Port de Sóller Loop.
-    </div>
+    <div class="gpx-box-text"><strong>📥 Download GPX-filer — Løberuter</strong>6 ruter fra Biniaraix Loop til Port de Sóller Loop.</div>
     <a class="gpx-btn" href="https://www.dropbox.com/scl/fo/torw34wt6qq3h4cj9oe9d/ADPXhUNDgZBwACS_gZ0ZHag?rlkey=nx58d4boznidwvafut4y87i5e&dl=0" target="_blank">↓ Hent GPX-filer</a>
   </div>
   <table class="route-table">
