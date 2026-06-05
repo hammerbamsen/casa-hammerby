@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Casa Hammerby — Gæsteguide Fornalutx</title>
+<meta name="description" content="Casa Hammerby — din guide til Fornalutx og Tramuntana. De bedste cykelruter, vandreruter, løberuter og spisesteder fra Eva &amp; Kennet." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+<style>
+:root {
+--stone: #c8b89a;
+--warm: #edf2e8;
+--terracotta: #b5603a;
+--dark: #1a2515;
+--mid: #3d5030;
+--light: #f2f7ee;
+--accent: #5c7248;
+--gold: #c8a96e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+font-family: 'Georgia', serif;
+background: var(--light);
+color: var(--dark);
+line-height: 1.7;
+}
+
+nav {
+position: sticky;
+top: 0;
+z-index: 100;
+background: var(--dark);
+padding: 0 2rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 56px;
+}
+.nav-logo {
+color: var(--stone);
+font-size: 0.95rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+white-space: nowrap;
+}
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a {
+color: #b8d0a4;
+text-decoration: none;
+font-family: sans-serif;
+font-size: 0.8rem;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+.hero {
+background:
+linear-gradient(160deg, rgba(26,37,21,0.72) 0%, rgba(40,65,28,0.56) 45%, rgba(74,107,53,0.32) 100%),
+url('https://www.dropbox.com/scl/fi/200mlr7o1xh9y2ddui7ec/img_8977-2.JPEG?rlkey=6im7c4n28woiec7v6nv1khq04&raw=1') center 60%/cover no-repeat;
+color: #f5f0e8;
+padding: 7rem 2rem 6rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+min-height: 88vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.hero-label { font-family: sans-serif; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: normal; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+.hero h1 span { color: var(--gold); }
+.hero-sub { font-size: 1.1rem; color: #c4d8a8; margin-bottom: 2rem; }
+.hero-intro { max-width: 580px; margin: 0 auto 2.5rem; font-size: 1.05rem; color: #e4e8d8; line-height: 1.85; }
+.hero-sig { font-style: italic; color: var(--gold); font-size: 1rem; }
+
+.photo-strip { display: grid; grid-template-columns: repeat(5, 1fr); height: 240px; overflow: hidden; }
+.ps-item { position: relative; overflow: hidden; cursor: pointer; }
+.ps-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+.ps-item:hover img { transform: scale(1.07); }
+.ps-item .ps-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(26,37,21,0.82)); color: var(--gold); font-family: sans-serif; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 1rem 0.5rem 0.5rem; text-align: center; }
+
+.toc { background: var(--warm); padding: 3rem 2rem; text-align: center; border-bottom: 1px solid #ccdfc4; }
+.toc-label { font-family: sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 1.5rem; }
+.toc-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 800px; margin: 0 auto; }
+.toc-item { background: white; border: 1px solid #c0d8b4; border-radius: 4px; padding: 0.8rem 1.4rem; text-decoration: none; color: var(--dark); font-family: sans-serif; font-size: 0.85rem; transition: all 0.2s; }
+.toc-item:hover { background: var(--accent); color: white; border-color: var(--accent); }
+.toc-item .num { display: block; font-size: 0.7rem; color: var(--accent); margin-bottom: 0.2rem; }
+.toc-item:hover .num { color: rgba(255,255,255,0.7); }
+
+.section-photo { width: 100%; max-width: 860px; margin: 0 auto; height: 380px; overflow: hidden; position: relative; }
+.section-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.section-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, var(--light)); }
+
+section { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; border-bottom: 1px solid #dcebd4; }
+section:last-of-type { border-bottom: none; }
+.section-label { font-family: sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: normal; color: var(--dark); margin-bottom: 1rem; }
+h3 { font-size: 1.15rem; font-weight: normal; color: var(--mid); margin: 2rem 0 0.5rem; padding-bottom: 0.3rem; border-bottom: 1px solid #c4dbb8; }
+h4 { font-size: 1rem; font-weight: bold; color: var(--dark); margin: 1.5rem 0 0.3rem; }
+p { margin-bottom: 0.8rem; color: var(--mid); }
+.lead { font-size: 1.05rem; color: var(--dark); margin-bottom: 1.5rem; }
+
+.gpx-box { background: white; border: 1px solid #c0d8b4; border-left: 4px solid var(--accent); border-radius: 4px; padding: 1rem 1.4rem; margin: 1.5rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.gpx-box-text { font-family: sans-serif; font-size: 0.85rem; color: var(--mid); }
+.gpx-box-text strong { display: block; color: var(--dark); font-size: 0.88rem; margin-bottom: 0.2rem; }
+.gpx-btn { background: var(--accent); color: white; padding: 0.5rem 1.1rem; border-radius: 3px; text-decoration: none; font-family: sans-serif; font-size: 0.78rem; letter-spacing: 0.04em; white-space: nowrap; transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.4rem; }
+.gpx-btn:hover { background: var(--dark); }
+.gpx-link { color: var(--accent); font-size: 0.75rem; text-decoration: none; font-family: sans-serif; white-space: nowrap; }
+.gpx-link:hover { color: var(--dark); text-decoration: underline; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.card { background: white; border: 1px solid #d0e4c8; border-radius: 6px; padding: 1.2rem 1.4rem; }
+.card-title { font-size: 1rem; font-weight: bold; color: var(--dark); margin-bottom: 0.4rem; }
+.card-title .fav { color: var(--terracotta); }
+.card p { font-size: 0.9rem; margin-bottom: 0.3rem; }
+.card-meta { font-family: sans-serif; font-size: 0.78rem; color: #7a9870; margin-top: 0.5rem; }
+.card-meta a { color: var(--accent); text-decoration: none; }
+.card-meta a:hover { text-decoration: underline; }
+
+.climb-list { margin-top: 1.5rem; }
+.climb-item { display: grid; grid-template-columns: 2rem 1fr auto; gap: 0.8rem; align-items: baseline; padding: 0.8rem 0; border-bottom: 1px solid #e4f0dc; }
+.climb-num { font-family: sans-serif; font-size: 0.75rem; color: var(--accent); font-weight: bold; }
+.climb-name { font-size: 1rem; color: var(--dark); }
+.climb-stats { font-family: sans-serif; font-size: 0.78rem; color: #7a9870; text-align: right; }
+
+.route-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-family: sans-serif; font-size: 0.85rem; }
+.route-table th { text-align: left; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); padding: 0.5rem 0.8rem; border-bottom: 2px solid #c0d8b4; }
+.route-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #e4f0dc; color: var(--mid); }
+.route-table tr:hover td { background: var(--warm); }
+
+.season-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: 0.82rem; font-family: sans-serif; }
+.season-table th { background: var(--dark); color: var(--gold); padding: 0.5rem 0.6rem; text-align: left; font-weight: normal; font-size: 0.72rem; letter-spacing: 0.05em; }
+.season-table td { padding: 0.5rem 0.6rem; border-bottom: 1px solid #e4f0dc; }
+.season-table tr:nth-child(even) td { background: #eef5e8; }
+
+.place-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.place-card { background: white; border: 1px solid #d0e4c8; border-radius: 6px; padding: 1.2rem; }
+.place-card h4 { margin-top: 0; font-size: 0.95rem; color: var(--dark); }
+.place-card p { font-size: 0.88rem; margin-bottom: 0.4rem; }
+.transport-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.transport-card { background: white; border-left: 3px solid var(--accent); padding: 1rem 1.2rem; }
+.transport-card h4 { margin-top: 0; font-size: 0.95rem; }
+
+footer { background: var(--dark); color: var(--stone); text-align: center; padding: 2.5rem; font-family: sans-serif; font-size: 0.82rem; letter-spacing: 0.05em; }
+
+.badge { display: inline-block; background: #e8f4dc; color: var(--accent); border: 1px solid #b8d8a0; border-radius: 2px; font-family: sans-serif; font-size: 0.7rem; padding: 0.1rem 0.4rem; margin-left: 0.4rem; vertical-align: middle; }
+.difficulty { font-family: sans-serif; font-size: 0.75rem; color: #7a9870; }
+.difficulty.hard { color: var(--terracotta); }
+.difficulty.medium { color: #c8903a; }
+.difficulty.easy { color: var(--accent); }
+
+@media (max-width: 640px) {
+.nav-links { display: none; }
+.hero { padding: 4rem 1.5rem 3rem; min-height: 70vh; }
+section { padding: 2.5rem 1.5rem; }
+.photo-strip { grid-template-columns: repeat(2, 1fr) 1fr; height: 160px; }
+.photo-strip .ps-item:nth-child(5) { display: none; }
+.climb-item { grid-template-columns: 2rem 1fr; }
+.climb-stats { grid-column: 2; }
+.route-table { font-size: 0.78rem; }
+.route-table th:last-child { font-size: 0; letter-spacing: 0; }
+.route-table th:last-child::after { content: 'GPX'; font-size: 0.65rem; letter-spacing: 0.08em; }
+.route-table td:last-child { text-align: center; padding: 0.4rem 0.3rem; }
+.route-table .gpx-link { font-size: 0; }
+.route-table .gpx-link::before { content: '↓'; font-size: 1rem; color: var(--accent); }
+.gpx-box { flex-direction: column; align-items: flex-start; }
+.section-photo { height: 180px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<span class="nav-logo">Casa Hammerby</span>
+<ul class="nav-links">
+<li><a href="#huset">Huset</a></li>
+<li><a href="#steder">Steder</a></li>
+<li><a href="#mad">Mad</a></li>
+<li><a href="#cykling">Cykling</a></li>
+<li><a href="#vandring">Vandring</a></li>
+<li><a href="#lob">Løb</a></li>
+</ul>
+</nav>
+
+<div class="hero">
+<p class="hero-label">Fornalutx · Mallorca · Tramuntana</p>
+<h1>Velkommen til <span>Fornalutx</span></h1>
+<p class="hero-sub">En guide fra Eva &amp; Kennet</p>
+<p class="hero-intro">
+Vi er kommet på Mallorca i over 15 år. Det startede med triathloncamp og Ironman — halvdistancer og fulde. Øen tiltrak os som cyklister, og vi har tilbragt mange timer i sadlen her oppe i Tramuntana.
+<br><br>
+En god ven gjorde os opmærksomme på Fornalutx. Vi er kommet tilbage igen og igen — til den lille brolagte landsby i dalen, hvor ingen har travlt og alt er, som det altid har været.
+<br><br>
+Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er til jer — fordi vi gerne vil dele det vi selv holder af.
+</p>
+<p class="hero-sig">Fornalutx er base. Resten af Tramuntana er jeres legeplads.<br>— Eva &amp; Kennet</p>
+</div>
+
+<div class="photo-strip">
+<div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANWi0xQQgPyFmtMRLRjotYs/House/img_6325%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Casa Hammerby tagterrasse" loading="lazy"><div class="ps-label">Huset</div></div>
+<div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANX9oW-F1JEwzEsQxXq8Jfg/Places/IMG_2142.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Fornalutx landsby" loading="lazy"><div class="ps-label">Steder</div></div>
+<div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AKUhjFPJui8MJqCODExyseI/Eating/img_7481%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Mad i Fornalutx" loading="lazy"><div class="ps-label">Mad</div></div>
+<div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AGtVWILIWg6YJhKhWG2zswU/Bike/IMG_4875.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Sa Calobra cykelrute" loading="lazy"><div class="ps-label">Cykling</div></div>
+<div class="ps-item"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANQFOvBV0iEwDHPyXU6fXt0/Hike/img_7395%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Port de Sóller fra oven" loading="lazy"><div class="ps-label">Vandring</div></div>
+</div>
+
+<div class="toc">
+<p class="toc-label">Indhold</p>
+<div class="toc-grid">
+<a href="#huset" class="toc-item"><span class="num">01</span>Casa Hammerby</a>
+<a href="#steder" class="toc-item"><span class="num">02</span>Steder at se</a>
+<a href="#mad" class="toc-item"><span class="num">03</span>Mad</a>
+<a href="#cykling" class="toc-item"><span class="num">04</span>Cykling</a>
+<a href="#vandring" class="toc-item"><span class="num">05</span>Vandring</a>
+<a href="#lob" class="toc-item"><span class="num">06</span>Løb</a>
+</div>
+</div>
+
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANWi0xQQgPyFmtMRLRjotYs/House/img_6325%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Casa Hammerby tagterrasse" loading="lazy"></div>
+<section id="huset">
+<p class="section-label">01 — Casa Hammerby</p>
+<h2>Vores hus i Fornalutx</h2>
+<p class="lead">Huset på 120 m² er fordelt over fire etager og bevarer de originale elementer fra opførselsåret 1900.</p>
+<p>Det ligger i hjertet af Fornalutx, kun få skridt fra pladsen. Huset har en smuk entré med originale fliser, tre dobbeltværelser, tre badeværelser, vaskerum, stue, fuldt udstyret køkken og en tagterrasse med vidunderlig udsigt over bjergene.</p>
+<h3>Fornalutx</h3>
+<p>Fornalutx er kåret til en af Spaniens smukkeste landsbyer — ikke én, men flere gange. Brolagte gader, stentrapper, appelsintræer der læner sig ind over murene.</p>
+<p>Landsbyen har ca. 500 beboere og ingen trafiklyskryds. Udsigten ud over dalen mod Tramuntana er der hele dagen. Om morgenen lugter det af appelsin.</p>
+<h3>Hvornår skal vi tage afsted?</h3>
+<p>Mallorca er en helårsdestination, men årstiderne er meget forskellige. <strong>Turister:</strong> ★ Stille · ★★ Moderat · ★★★ Travlt · ★★★★ Højsæson · ★★★★★ Peak</p>
+<table class="season-table">
+<thead><tr><th>Måned</th><th>Temp.</th><th>Turister</th><th>Bemærkning</th></tr></thead>
+<tbody>
+<tr><td>Januar</td><td>10–15°</td><td>★</td><td>Stille, grønt, lokalt</td></tr>
+<tr><td>Februar</td><td>11–16°</td><td>★</td><td>Pro-cykelhold træner her</td></tr>
+<tr><td>Marts</td><td>13–18°</td><td>★★</td><td>Perfekt for cyklister</td></tr>
+<tr><td>April</td><td>15–20°</td><td>★★★</td><td>Påske kan ramme her</td></tr>
+<tr><td>Maj</td><td>18–24°</td><td>★★★</td><td>★ Vores anbefaling</td></tr>
+<tr><td>Juni</td><td>22–28°</td><td>★★★★</td><td>Varmt, travlt</td></tr>
+<tr><td>Juli</td><td>25–32°</td><td>★★★★★</td><td>Peak sæson</td></tr>
+<tr><td>August</td><td>26–33°</td><td>★★★★★</td><td>Peak sæson</td></tr>
+<tr><td>September</td><td>23–29°</td><td>★★★★</td><td>Stadig varmt</td></tr>
+<tr><td>Oktober</td><td>19–24°</td><td>★★★</td><td>★ Vores anbefaling</td></tr>
+<tr><td>November</td><td>15–20°</td><td>★★</td><td>Roligt og smukt</td></tr>
+<tr><td>December</td><td>11–16°</td><td>★</td><td>Julestemning i bjergene</td></tr>
+</tbody>
+</table>
+<p style="margin-top:0.8rem;font-style:italic;font-size:0.9rem;">Vores personlige anbefaling: Maj og oktober er de måneder hvor øen er sig selv. Februar og marts er perfekte for cykelentusiaster.</p>
+<h3>Transport til og fra Fornalutx</h3>
+<div class="transport-grid">
+<div class="transport-card"><h4>🚂 Trætoget Palma → Sóller</h4><p>Ferrocarril de Sóller — et af Mallorcas bedste oplevelser. Afgår fra Plaça Espanya.</p><p class="card-meta"><a href="https://trendesoller.com" target="_blank">trendesoller.com</a></p></div>
+<div class="transport-card"><h4>🚃 Sporvogn Sóller → Port de Sóller</h4><p>Den gamle træsporvogn kører frem og tilbage — perfekt til en eftermiddag uden program.</p></div>
+<div class="transport-card"><h4>🚌 Bus</h4><p>Fra Fornalutx til Port de Sóller, Deià, Valldemossa og Palma. En af de smukkeste ruter på Mallorca.</p><p class="card-meta"><a href="https://tib.org/bus" target="_blank">tib.org/bus</a></p></div>
+<div class="transport-card"><h4>🚕 Taxa 1 Fornalutx</h4><p>Vores faste taxa. Kender hvert eneste sving.</p><p class="card-meta">WhatsApp: <a href="https://wa.me/34615595963" target="_blank">+34 615 59 59 63</a></p></div>
+</div>
+<h3>Hoteller i lokalområdet</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">Hotel Can Verdera</div><p>Boutique-hotel i traditionelt stenhus. Kun voksne. Pool og restaurant Ritma.</p><div class="card-meta">Fornalutx · <a href="https://hotelcanverdera.com" target="_blank">hotelcanverdera.com</a></div></div>
+<div class="card"><div class="card-title">Fornalutx Petit Hotel</div><p>Charmerende hotel i gammelt kloster. Kapellet er nu hotellets bedste suite.</p><div class="card-meta">Calle Alba 22 · <a href="https://petit.hotels-of-mallorca.com" target="_blank">petit.hotels-of-mallorca.com</a></div></div>
+<div class="card"><div class="card-title">Sa Tanqueta de Fornalutx</div><p>Familiedrevet, kun voksne. Saltvandpool med bjergudsigt.</p><div class="card-meta"><a href="https://sa-tanqueta.com" target="_blank">sa-tanqueta.com</a></div></div>
+<div class="card"><div class="card-title">Finca Ca's Sant</div><p>700+ appelsin- og citrontræer. To pools. 600m fra torvet.</p><div class="card-meta">Sóller · <a href="https://cas-sant.com" target="_blank">cas-sant.com</a></div></div>
+<div class="card"><div class="card-title">The Salvia</div><p>Kun voksne. 7 værelser i restaureret købmandshus fra 1800-tallet.</p><div class="card-meta">Calle de la Palma 18, Sóller · <a href="https://hotelsalvia.com" target="_blank">hotelsalvia.com</a></div></div>
+</div>
+</section>
+
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ALzdmcEuq_66u711h9TzKd4/Places/IMG_2074%202.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Morgendis over Sóller-dalen" loading="lazy"></div>
+<section id="steder">
+<p class="section-label">02 — Steder at se</p>
+<h2>Tramuntana</h2>
+<p class="lead">Mallorcas nordvestkyst er noget for sig. Tramuntana-bjergene, citruslunde, gamle stenhuse og landsbyer hvor ingen har travlt.</p>
+<div class="place-grid">
+<div class="place-card"><h4>Fornalutx</h4><p>Kåret til en af Spaniens smukkeste landsbyer. Brolagte gader, stentrapper, appelsintræer der læner sig ind over murene.</p></div>
+<div class="place-card"><h4>Sóller</h4><p>I bunden af den gyldne dal. Modernistiske bygninger fra citrusindustriens storhedstid. Trætoget fra Palma er værd at prøve.</p></div>
+<div class="place-card"><h4>Biniaraix</h4><p>20 min. til fods fra Fornalutx. Herfra starter den stenlagte sti Barranc de Biniaraix.</p></div>
+<div class="place-card"><h4>Port de Sóller</h4><p>Havnebyen ved bugten. Grønne bjerge og træsporvogn til Sóller.</p></div>
+<div class="place-card"><h4>Deià</h4><p>Robert Graves slog sig ned her i 1929. Gå ned til Cala Deià for en svømmetur.</p></div>
+<div class="place-card"><h4>Valldemossa</h4><p>Karteuserkloster fra det 14. århundrede. Chopin og George Sand, 1838. UNESCO-listet.</p></div>
+<div class="place-card"><h4>Sa Calobra</h4><p>Cykl ned ad den berømte snoningsvej — eller tag båden fra Port de Sóller.</p><p class="card-meta"><a href="https://barcoscalobra.com" target="_blank">barcoscalobra.com</a></p></div>
+<div class="place-card"><h4>Mirador ses Barques</h4><p>Udsigtspunkt 6 km ovenfor Fornalutx. Restaurant heroppe. Særligt godt ved solnedgang.</p></div>
+<div class="place-card"><h4>Palma — Katedralen</h4><p>La Seu fra det 13. århundrede. Et af Europas smukkeste gotiske katedraler.</p></div>
+<div class="place-card"><h4>Lluc</h4><p>Kloster fra det 13. århundrede, 525 m oppe. Godt udgangspunkt for vandreture.</p></div>
+</div>
+</section>
+
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AKUhjFPJui8MJqCODExyseI/Eating/img_7481%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Mad i Fornalutx" loading="lazy" style="object-position: center 30%;"></div>
+<section id="mad">
+<p class="section-label">03 — Mad</p>
+<h2>Spisesteder</h2>
+<p class="lead">Her er de steder vi selv spiser — sorteret efter område. <span style="color:var(--terracotta)">★</span> er vores absolutte favoritter.</p>
+<h3>Fornalutx</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">Café Med <span class="fav">★</span></div><p>400 år gammelt stenhus ved pladsen. Nok det tætteste på fine dining i Fornalutx. Book 2-3 dage i forvejen.</p><div class="card-meta">Calle de sa Plaça 7 · <a href="https://cafemedmallorca.com" target="_blank">cafemedmallorca.com</a></div></div>
+<div class="card"><div class="card-title">Ritma <span class="fav">★</span></div><p>Vores favorit. På Hotel Can Verdera, drives af kok Marcos Servera.</p><div class="card-meta">Carrer des Toros 1 · <a href="https://ritmamallorca.com" target="_blank">ritmamallorca.com</a></div></div>
+<div class="card"><div class="card-title">Bar Deportivo <span class="fav">★</span></div><p>Landsbybaren på pladsen. Her mødes de lokale.</p></div>
+<div class="card"><div class="card-title">Es Turó</div><p>Familiedrevet mallorcinsk mad. God udsigt fra terrassen.</p><div class="card-meta"><a href="https://restaurante-esturo-fornalutx.com" target="_blank">restaurante-esturo-fornalutx.com</a></div></div>
+<div class="card"><div class="card-title">Ca N'Antuna</div><p>Den ældste restaurant i Fornalutx — samme familie i over 50 år. Prøv pattegrisen fra spiddet.</p></div>
+</div>
+<h3>Biniaraix</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">Café es Barranc</div><p>Populær med vandrere. To terrasser og god simpel mad.</p><div class="card-meta"><a href="https://esbarrancdebiniaraix.com" target="_blank">esbarrancdebiniaraix.com</a></div></div>
+</div>
+<h3>Sóller</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">La Romaguera <span class="fav">★</span></div><p>Yndlings tapas sted — et nøk opad. Book bord udenfor.</p></div>
+<div class="card"><div class="card-title">Luna 36 <span class="fav">★</span></div><p>Moderne middelhavskøkken i ombygget chokoladefabrik. Hjemmelavet pasta er et must.</p><div class="card-meta"><a href="https://luna36.es" target="_blank">luna36.es</a></div></div>
+<div class="card"><div class="card-title">Ca'n Boqueta <span class="fav">★</span></div><p>Michelin BIB Gourmand. Sæsonbestemte smagsmenuer.</p><div class="card-meta"><a href="https://canboqueta.com" target="_blank">canboqueta.com</a></div></div>
+<div class="card"><div class="card-title">Café Sóller</div><p>God brasserie-mad, eget bageri og bedste terrasse på torvet.</p><div class="card-meta"><a href="https://cafesoller.com" target="_blank">cafesoller.com</a></div></div>
+<div class="card"><div class="card-title">Casa Alvaro</div><p>Gourmet-tapas i sidegade nær torvet. Book bord online.</p><div class="card-meta"><a href="https://casalvaro.com" target="_blank">casalvaro.com</a></div></div>
+<div class="card"><div class="card-title">El Petit Bistro</div><p>Moderne bistro på torvet. Fine dining-ambitioner i afslappede rammer.</p><div class="card-meta"><a href="https://petitbistrosoller.com" target="_blank">petitbistrosoller.com</a></div></div>
+</div>
+<h3>Port de Sóller</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">Neni <span class="fav">★</span></div><p>Mellemøstlig-inspireret på taget af Bikini Hotel. Fed stemning. Reservér bord.</p><div class="card-meta"><a href="https://nenifood.com" target="_blank">nenifood.com</a></div></div>
+<div class="card"><div class="card-title">Villa Luisa</div><p>Restaureret villa fra 1900 ved stranden. Josper-grillet fisk og kød.</p><div class="card-meta"><a href="https://villaluisasoller.com" target="_blank">villaluisasoller.com</a></div></div>
+<div class="card"><div class="card-title">Randemar</div><p>Gammelt mallorcinsk hus på havnefronten. God cocktailmenu.</p><div class="card-meta"><a href="https://randemar.com" target="_blank">randemar.com</a></div></div>
+<div class="card"><div class="card-title">Cap Roig Brasserie</div><p>På Jumeirah-hotellet. Time det med solnedgangen.</p></div>
+</div>
+<h3>Selva</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">Miceli <span class="fav">★</span></div><p>Kok Marga Coll byder personligt velkommen. Menuen skifter dagligt. Som at spise hjemme hos nogen der kan lave mad.</p><div class="card-meta"><a href="https://miceli.es" target="_blank">miceli.es</a></div></div>
+</div>
+<h3>Alaró</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">Es Verger <span class="fav">★</span></div><p>"Lam-restauranten." Rustik gårdrestaurant halvvejs oppe ad Puig de Alaró.</p><div class="card-meta"><a href="https://esverger.es" target="_blank">esverger.es</a></div></div>
+</div>
+<h3>Palma</h3>
+<div class="card-grid">
+<div class="card"><div class="card-title">Vandal <span class="fav">★</span></div><p>Absolutte favorit. Kok Bernabé Caravotta. Moderne, kreativ gastronomi.</p><div class="card-meta"><a href="https://vandalpalma.com" target="_blank">vandalpalma.com</a></div></div>
+<div class="card"><div class="card-title">El Camino <span class="fav">★</span></div><p>Tapasrestaurant bygget op om en 34-personers bar (Eddie Hart, Barrafina).</p><div class="card-meta"><a href="https://elcaminopalma.es" target="_blank">elcaminopalma.es</a></div></div>
+<div class="card"><div class="card-title">Aromata <span class="fav">★</span></div><p>Michelin-stjernet, Andreu Genestra. Frokostmenuen er overraskende overkommelig.</p><div class="card-meta"><a href="https://aromatarestaurant.com" target="_blank">aromatarestaurant.com</a></div></div>
+<div class="card"><div class="card-title">Marc Fosh</div><p>Michelin-stjernet britisk kok på Mallorca i over 25 år.</p><div class="card-meta"><a href="https://marcfosh.com" target="_blank">marcfosh.com</a></div></div>
+<div class="card"><div class="card-title">Txoko Martín</div><p>Af Martín Berasategui (12 Michelin-stjerner). Tapas og baskiske retter.</p><div class="card-meta"><a href="https://eltxokodemartin.com" target="_blank">eltxokodemartin.com</a></div></div>
+<div class="card"><div class="card-title">Vida by UM</div><p>Fine dining med jungle-stemning. Fusion-køkken med deleretter ved marinaen.</p><div class="card-meta"><a href="https://vidabyum.com" target="_blank">vidabyum.com</a></div></div>
+</div>
+</section>
+
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/AGtVWILIWg6YJhKhWG2zswU/Bike/IMG_4875.jpeg?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Sa Calobra — den ikoniske snoningsvej" loading="lazy"></div>
+<section id="cykling">
+<p class="section-label">04 — Cykling</p>
+<h2>Cykling i Tramuntana</h2>
+<p class="lead">10 af de bedste stigninger på øen — alle kan køres fra Sóller-dalen som base.</p>
+<div class="gpx-box">
+<div class="gpx-box-text"><strong>📥 Download GPX-filer — Cykelruter</strong>23 ruter fra Sóller-dalen. Klar til Garmin, Wahoo og Komoot.</div>
+<a class="gpx-btn" href="https://www.dropbox.com/scl/fo/udps0z3ummbux46s0jcij/AFM6p7xfo7WYwjAW3nhHbKU?rlkey=dwrw42obw8uktzqcshtndopnp&dl=0" target="_blank">↓ Hent GPX-filer</a>
+</div>
+<h3>Top 10 stigninger på Mallorca</h3>
+<div class="climb-list">
+<div class="climb-item"><span class="climb-num">1</span><span class="climb-name"><strong>Sa Calobra</strong> — Den store. En af verdens mest bemærkelsesværdige veje.</span><span class="climb-stats">10,2 km · 703 hm · 6,9%</span></div>
+<div class="climb-item"><span class="climb-num">2</span><span class="climb-name"><strong>Puig Major</strong> — Mallorcas højeste bjerg. Nedkørslen til Lluc er en af øens bedste.</span><span class="climb-stats">14,6 km · 860 hm · 5,9%</span></div>
+<div class="climb-item"><span class="climb-num">3</span><span class="climb-name"><strong>Coll de Femenia</strong> — Åbner adgang til resten af Tramuntana.</span><span class="climb-stats">7,7 km · 420 hm · 5,5%</span></div>
+<div class="climb-item"><span class="climb-num">4</span><span class="climb-name"><strong>Coll de Sóller</strong> — 29 sving op fra Sóller-siden. Kør IKKE ind i tunnelen mod Palma.</span><span class="climb-stats">7,5 km · 430 hm · 5,7%</span></div>
+<div class="climb-item"><span class="climb-num">5</span><span class="climb-name"><strong>Coll de sa Batalla</strong> — Tankstation-restaurant på toppen med obligatorisk is.</span><span class="climb-stats">7,9 km · 391 hm · 4,9%</span></div>
+<div class="climb-item"><span class="climb-num">6</span><span class="climb-name"><strong>Puig de Randa</strong> — Kloster og cafébar på toppen. Populær hos Team INEOS.</span><span class="climb-stats">5,5 km · 337 hm · 6,1%</span></div>
+<div class="climb-item"><span class="climb-num">7</span><span class="climb-name"><strong>Formentor fyrtårn</strong> — Fire stigninger i alt ud og hjem. Pas på gederne.</span><span class="climb-stats">17,7 km · 590 hm</span></div>
+<div class="climb-item"><span class="climb-num">8</span><span class="climb-name"><strong>Coll d'Honor</strong> — Fra Bunyola. Færre hårnålekurve, mere træbeklædt.</span><span class="climb-stats">4,7 km · 297 hm · 6,2%</span></div>
+<div class="climb-item"><span class="climb-num">9</span><span class="climb-name"><strong>Port de Valldemossa</strong> — Den hemmelige stigning. Næsten ingen trafik.</span><span class="climb-stats">5 km · 345 hm · 7%</span></div>
+<div class="climb-item"><span class="climb-num">10</span><span class="climb-name"><strong>Coll d'Orient</strong> — Behagelig gradvis stigning. Orient på den anden side er postkort-smukt.</span><span class="climb-stats">5,2 km · 258 hm · 5,1%</span></div>
+</div>
+<h3>23 cykelruter fra Sóller-dalen</h3>
+<table class="route-table">
+<thead><tr><th>Rute</th><th>Distance</th><th>Stigning</th><th>GPX</th></tr></thead>
+<tbody>
+<tr><td>Port Sóller</td><td>20 km</td><td>400 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Port%20Soller.gpx">↓ gpx</a></td></tr>
+<tr><td>Puig Major</td><td>25 km</td><td>700 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Puigh%20Major.gpx">↓ gpx</a></td></tr>
+<tr><td>Deià</td><td>30 km</td><td>500 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Deia.gpx">↓ gpx</a></td></tr>
+<tr><td>Sa Calobra</td><td>60 km</td><td>2.000 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Sa%20Calobra.gpx">↓ gpx</a></td></tr>
+<tr><td>Valldemossa</td><td>60 km</td><td>1.000 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Valldemossa.gpx">↓ gpx</a></td></tr>
+<tr><td>Port Valldemossa</td><td>60 km</td><td>1.400 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Port%20Valldemossa.gpx">↓ gpx</a></td></tr>
+<tr><td>Esporles</td><td>70 km</td><td>1.200 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Esporles.gpx">↓ gpx</a></td></tr>
+<tr><td>Palma</td><td>70 km</td><td>1.200 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Palma.gpx">↓ gpx</a></td></tr>
+<tr><td>Cala Tuent</td><td>71,6 km</td><td>2.069 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Cala%20Tuent.gpx">↓ gpx</a></td></tr>
+<tr><td>Port des Canonge</td><td>74,2 km</td><td>1.659 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Port%20des%20Canonge.gpx">↓ gpx</a></td></tr>
+<tr><td>Orient Loop — Clockwise</td><td>75 km</td><td>1.500 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Orient%20-%20clockwise.gpx">↓ gpx</a></td></tr>
+<tr><td>Orient Loop — Anti-clockwise</td><td>75,5 km</td><td>1.504 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Orient%20-%20anti-clockwise.gpx">↓ gpx</a></td></tr>
+<tr><td>Puigpunyent</td><td>86 km</td><td>1.400 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Puigpunyent.gpx">↓ gpx</a></td></tr>
+<tr><td>Sobremunt</td><td>88,8 km</td><td>1.713 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Sobremunt.gpx">↓ gpx</a></td></tr>
+<tr><td>Orient Udvidet — Anti-clockwise</td><td>89,9 km</td><td>1.637 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Orient%20extended%20-%20anti-clockwise.gpx">↓ gpx</a></td></tr>
+<tr><td>Coll de sa Batalla</td><td>90 km</td><td>1.500 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Coll%20de%20sa%20Batalla.gpx">↓ gpx</a></td></tr>
+<tr><td>Orient Udvidet — Clockwise</td><td>90 km</td><td>1.700 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Orient%20extended%20-%20clockwise.gpx">↓ gpx</a></td></tr>
+<tr><td>Randa</td><td>110 km</td><td>1.500 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Randa.gpx">↓ gpx</a></td></tr>
+<tr><td>Pollensa</td><td>122 km</td><td>1.950 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Pollensa.gpx">↓ gpx</a></td></tr>
+<tr><td>Coll de Femenia</td><td>122 km</td><td>1.977 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Coll%20de%20Femenia.gpx">↓ gpx</a></td></tr>
+<tr><td>Andratx — Anti-clockwise</td><td>125 km</td><td>2.300 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Andratx%20-%20anti%20clockwise.gpx">↓ gpx</a></td></tr>
+<tr><td>Andratx — Clockwise</td><td>126,5 km</td><td>2.470 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Andratx%20-%20clockwise.gpx">↓ gpx</a></td></tr>
+<tr><td>Formentor</td><td>150 km</td><td>3.000 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/cykling/Formentor.gpx">↓ gpx</a></td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="section-photo"><img src="https://www.dropbox.com/scl/fo/49v6o4cy1wuxwwqha7swt/ANQFOvBV0iEwDHPyXU6fXt0/Hike/img_7395%202.JPEG?rlkey=zxj28e1yfv8rpxq8i3zu2baay&raw=1" alt="Port de Sóller fra oven" loading="lazy"></div>
+<section id="vandring">
+<p class="section-label">05 — Vandring</p>
+<h2>Vandreruter</h2>
+<p class="lead">Alle ruter starter fra Sóller-dalen. Serra de Tramuntana er UNESCO-verdensarv — og man forstår hvorfor.</p>
+<div class="gpx-box">
+<div class="gpx-box-text"><strong>📥 Download GPX-filer — Vandreruter</strong>14 ruter inkl. Barranc de Biniaraix, Deià og Basin de Cuber.</div>
+<a class="gpx-btn" href="https://www.dropbox.com/scl/fo/uzu360ebjk9nbl414aeyd/AFlPrlLaC0LpYuvmqXp58V8?rlkey=29tybd7hwwgos1ilsjn2ndyhi&dl=0" target="_blank">↓ Hent GPX-filer</a>
+</div>
+<table class="route-table">
+<thead><tr><th>Rute</th><th>Distance</th><th>Stigning</th><th>Sværhed</th><th>GPX</th></tr></thead>
+<tbody>
+<tr><td>Biniaraix Loop</td><td>6,5 km</td><td>300 hm</td><td><span class="difficulty medium">Moderat</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Biniaraix%20loop.gpx">↓ gpx</a></td></tr>
+<tr><td>Binaraix (kort)</td><td>6,6 km</td><td>299 hm</td><td><span class="difficulty easy">Let</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Binaraix.gpx">↓ gpx</a></td></tr>
+<tr><td>Biniaraix Loop — Kort</td><td>6,9 km</td><td>150 hm</td><td><span class="difficulty easy">Let</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Biniaraix%20loop%20-%20short.gpx">↓ gpx</a></td></tr>
+<tr><td>Port de Sóller</td><td>8 km</td><td>200 hm</td><td><span class="difficulty easy">Let</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Port%20de%20Soller.gpx">↓ gpx</a></td></tr>
+<tr><td>Puig de Sa Bassa <span class="badge">Lukket tirs/tors + aug–jan weekender</span></td><td>9,5 km</td><td>658 hm</td><td><span class="difficulty medium">Moderat</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Puig%20de%20Sa%20Bassa.gpx">↓ gpx</a></td></tr>
+<tr><td>Sóller — Biniaraix</td><td>10,6 km</td><td>340 hm</td><td><span class="difficulty medium">Moderat</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/So%CC%81ller%20via%20Binaraix%20-%20long.gpx">↓ gpx</a></td></tr>
+<tr><td>Valldemossa — Deià</td><td>12 km</td><td>550 hm</td><td><span class="difficulty medium">Middel</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Valldemossa-Deia.gpx">↓ gpx</a></td></tr>
+<tr><td>Deià <span class="badge">Tag badetøj</span></td><td>12,3 km</td><td>396 hm</td><td><span class="difficulty medium">Moderat</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Deia%CC%81.gpx">↓ gpx</a></td></tr>
+<tr><td>Puig des Verger</td><td>14 km</td><td>950 hm</td><td><span class="difficulty hard">Svær</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Puig%20des%20Verger.gpx">↓ gpx</a></td></tr>
+<tr><td>Port de Sóller → Fornalutx</td><td>16,7 km</td><td>436 hm</td><td><span class="difficulty medium">Moderat</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/PdS%20to%20Fornalutx.gpx">↓ gpx</a></td></tr>
+<tr><td>Far de Cap Gros</td><td>17 km</td><td>345 hm</td><td><span class="difficulty medium">Moderat</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Far%20des%20Cap%20Gros.gpx">↓ gpx</a></td></tr>
+<tr><td>Sa Calobra <span class="badge">Tag færgen fra Port de Sóller</span></td><td>18 km</td><td>950 hm</td><td><span class="difficulty hard">Svær</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Sa%20Calobra.gpx">↓ gpx</a></td></tr>
+<tr><td>Basin de Cuber</td><td>18,2 km</td><td>1.124 hm</td><td><span class="difficulty hard">Svær</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Basin%20de%20Cuber.gpx">↓ gpx</a></td></tr>
+<tr><td>Extreme Hiking</td><td>21 km</td><td>1.000 hm</td><td><span class="difficulty hard">Meget svær</span></td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/vandring/Basin%20de%20Cuber%20-%20Extreme.gpx">↓ gpx</a></td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="lob">
+<p class="section-label">06 — Løb</p>
+<h2>Trail running</h2>
+<p class="lead">Trail running i Tramuntana-bjergene. Alle ruter starter fra Sóller-dalen.</p>
+<div class="gpx-box">
+<div class="gpx-box-text"><strong>📥 Download GPX-filer — Løberuter</strong>8 ruter fra Biniaraix Loop til Basin de Cuber.</div>
+<a class="gpx-btn" href="https://www.dropbox.com/scl/fo/torw34wt6qq3h4cj9oe9d/ADPXhUNDgZBwACS_gZ0ZHag?rlkey=nx58d4boznidwvafut4y87i5e&dl=0" target="_blank">↓ Hent GPX-filer</a>
+</div>
+<table class="route-table">
+<thead><tr><th>Rute</th><th>Distance</th><th>Stigning</th><th>GPX</th></tr></thead>
+<tbody>
+<tr><td>Biniaraix Loop</td><td>6 km</td><td>134 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Biniaraix%20loop.gpx">↓ gpx</a></td></tr>
+<tr><td>Biniaraix Loop — Lang</td><td>8 km</td><td>295 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Binianaix%20loop%20-%20long.gpx">↓ gpx</a></td></tr>
+<tr><td>Sa Bassa</td><td>10 km</td><td>670 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Sa%20Bassa.gpx">↓ gpx</a></td></tr>
+<tr><td>Biniaraix Loop — Op</td><td>12 km</td><td>900 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Biniaraix%20med%20h%C3%B8jdemeter.gpx">↓ gpx</a></td></tr>
+<tr><td>Far des Cap Gros</td><td>17 km</td><td>345 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Far%20ds%20Cap%20Gros.gpx">↓ gpx</a></td></tr>
+<tr><td>Port de Sóller Loop</td><td>19 km</td><td>739 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Port%20de%20So%CC%81ller%20loop.gpx">↓ gpx</a></td></tr>
+<tr><td>Far des Cap Gros — Lang</td><td>19,3 km</td><td>501 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Far%20des%20Cap%20Gros%20-%20long.gpx">↓ gpx</a></td></tr>
+<tr><td>Basin de Cuber</td><td>22 km</td><td>1.083 hm</td><td><a class="gpx-link" href="https://github.com/hammerbamsen/casa-hammerby/raw/main/gpx/lob/Basin%20de%20Cuber.gpx">↓ gpx</a></td></tr>
+</tbody>
+</table>
+</section>
+
+<footer>
+<p>Casa Hammerby · Fornalutx, Mallorca</p>
+<p style="margin-top:0.5rem;opacity:0.6;">En guide fra Eva &amp; Kennet · hammerbamsen.github.io/casa-hammerby</p>
+</footer>
+
+</body>
+</html>
