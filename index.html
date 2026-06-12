@@ -79,11 +79,6 @@ justify-content: center;
 .hero-intro { max-width: 620px; margin: 0 auto 2.5rem; font-size: 1.12rem; color: #f0f4e8; line-height: 1.9; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
 .hero-sig { font-style: italic; color: var(--gold); font-size: 1rem; }
 
-.photo-strip { display: grid; grid-template-columns: repeat(5, 1fr); height: 240px; overflow: hidden; }
-.ps-item { position: relative; overflow: hidden; cursor: pointer; }
-.ps-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
-.ps-item:hover img { transform: scale(1.07); }
-.ps-item .ps-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(26,37,21,0.82)); color: var(--gold); font-family: sans-serif; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; padding: 1rem 0.5rem 0.5rem; text-align: center; }
 
 .toc { background: var(--warm); padding: 3rem 2rem; text-align: center; border-bottom: 1px solid #ccdfc4; }
 .toc-label { font-family: sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid); margin-bottom: 1.5rem; }
@@ -94,6 +89,7 @@ justify-content: center;
 .toc-item:hover .num { color: rgba(255,255,255,0.7); }
 
 .section-photo { width: 100%; max-width: 860px; margin: 0 auto; height: 480px; overflow: hidden; position: relative; }
+.section-photo a { display: block; width: 100%; height: 100%; }
 .section-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .section-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, var(--light)); }
 
@@ -200,9 +196,6 @@ cursor: pointer; border-radius: 3px; transition: background 0.2s;
 .nav-links { display: none; }
 .hero { padding: 4rem 1.5rem 3rem; min-height: 70vh; }
 section { padding: 2.5rem 1.5rem; }
-.photo-strip { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 110px); height: auto; }
-.photo-strip .ps-item:nth-child(5) { grid-column: span 2; }
-.ps-item a { display: block; width: 100%; height: 100%; }
 html, body { overflow-x: hidden; max-width: 100vw; }
 .toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
 .toc-item { text-align: center; padding: 0.7rem 0.5rem; }
@@ -276,13 +269,6 @@ Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er
 <p class="hero-sig">Fornalutx er base. Resten af Tramuntana er jeres legeplads.<br>— Eva &amp; Kennet</p>
 </div>
 
-<div class="photo-strip">
-<div class="ps-item"><a href="img/house-lg.jpg" target="_blank"><img src="img/house-lg.jpg" srcset="img/house-sm.jpg 800w, img/house-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Casa Hammerby tagterrasse" loading="lazy"></a><div class="ps-label">Huset</div></div>
-<div class="ps-item"><a href="img/fornalutx-lg.jpg" target="_blank"><img src="img/fornalutx-lg.jpg" srcset="img/fornalutx-sm.jpg 800w, img/fornalutx-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Fornalutx landsby" loading="lazy"></a><div class="ps-label">Steder</div></div>
-<div class="ps-item"><a href="img/mad-lg.jpg" target="_blank"><img src="img/mad-lg.jpg" srcset="img/mad-sm.jpg 800w, img/mad-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Mad i Fornalutx" loading="lazy"></a><div class="ps-label">Mad</div></div>
-<div class="ps-item"><a href="img/bike-lg.jpg" target="_blank"><img src="img/bike-lg.jpg" srcset="img/bike-sm.jpg 800w, img/bike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Sa Calobra cykelrute" loading="lazy"></a><div class="ps-label">Cykling</div></div>
-<div class="ps-item"><a href="img/hike-lg.jpg" target="_blank"><img src="img/hike-lg.jpg" srcset="img/hike-sm.jpg 800w, img/hike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Port de Sóller fra oven" loading="lazy"></a><div class="ps-label">Vandring</div></div>
-</div>
 
 <div class="toc">
 <p class="toc-label">Indhold</p>
@@ -297,7 +283,7 @@ Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er
 </div>
 </div>
 
-<div class="section-photo"><img src="img/house-lg.jpg" srcset="img/house-sm.jpg 800w, img/house-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Casa Hammerby tagterrasse" loading="lazy"></div>
+<div class="section-photo"><a href="img/house-lg.jpg" target="_blank"><img src="img/house-lg.jpg" srcset="img/house-sm.jpg 800w, img/house-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Casa Hammerby tagterrasse" loading="lazy"></a></div>
 <section id="huset">
 <p class="section-label">01 — Casa Hammerby</p>
 <h2>Vores hus i Fornalutx</h2>
@@ -395,7 +381,7 @@ Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er
 </div>
 </section>
 
-<div class="section-photo"><img src="img/dis-lg.jpg" srcset="img/dis-sm.jpg 800w, img/dis-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Morgendis over Sóller-dalen" loading="lazy"></div>
+<div class="section-photo"><a href="img/dis-lg.jpg" target="_blank"><img src="img/dis-lg.jpg" srcset="img/dis-sm.jpg 800w, img/dis-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Morgendis over Sóller-dalen" loading="lazy"></a></div>
 <section id="steder">
 <p class="section-label">03 — Steder at se</p>
 <h2>Tramuntana</h2>
@@ -414,7 +400,7 @@ Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er
 </div>
 </section>
 
-<div class="section-photo"><img src="img/mad-lg.jpg" srcset="img/mad-sm.jpg 800w, img/mad-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Mad i Fornalutx" loading="lazy" style="object-position: center 30%;"></div>
+<div class="section-photo"><a href="img/mad-lg.jpg" target="_blank"><img src="img/mad-lg.jpg" srcset="img/mad-sm.jpg 800w, img/mad-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Mad i Fornalutx" loading="lazy" style="object-position: center 30%;"></a></div>
 <section id="mad">
 <p class="section-label">04 — Mad</p>
 <h2>Spisesteder</h2>
@@ -469,7 +455,7 @@ Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er
 </div>
 </section>
 
-<div class="section-photo"><img src="img/bike-lg.jpg" srcset="img/bike-sm.jpg 800w, img/bike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Sa Calobra — den ikoniske snoningsvej" loading="lazy"></div>
+<div class="section-photo"><a href="img/bike-lg.jpg" target="_blank"><img src="img/bike-lg.jpg" srcset="img/bike-sm.jpg 800w, img/bike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Sa Calobra — den ikoniske snoningsvej" loading="lazy"></a></div>
 <section id="cykling">
 <p class="section-label">05 — Cykling</p>
 <h2>Cykling i Tramuntana</h2>
@@ -522,7 +508,7 @@ Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er
 </table>
 </section>
 
-<div class="section-photo"><img src="img/hike-lg.jpg" srcset="img/hike-sm.jpg 800w, img/hike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Port de Sóller fra oven" loading="lazy"></div>
+<div class="section-photo"><a href="img/hike-lg.jpg" target="_blank"><img src="img/hike-lg.jpg" srcset="img/hike-sm.jpg 800w, img/hike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Port de Sóller fra oven" loading="lazy"></a></div>
 <section id="vandring">
 <p class="section-label">06 — Vandring</p>
 <h2>Vandreruter</h2>
