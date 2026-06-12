@@ -200,8 +200,9 @@ cursor: pointer; border-radius: 3px; transition: background 0.2s;
 .nav-links { display: none; }
 .hero { padding: 4rem 1.5rem 3rem; min-height: 70vh; }
 section { padding: 2.5rem 1.5rem; }
-.photo-strip { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 130px); height: auto; }
-.photo-strip .ps-item:nth-child(5) { display: none; }
+.photo-strip { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 110px); height: auto; }
+.photo-strip .ps-item:nth-child(5) { grid-column: span 2; }
+.ps-item a { display: block; width: 100%; height: 100%; }
 html, body { overflow-x: hidden; max-width: 100vw; }
 .toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
 .toc-item { text-align: center; padding: 0.7rem 0.5rem; }
@@ -276,11 +277,11 @@ Denne guide er ikke skrevet for at sælge stedet. Det taler for sig selv. Den er
 </div>
 
 <div class="photo-strip">
-<div class="ps-item"><img src="img/house-lg.jpg" srcset="img/house-sm.jpg 800w, img/house-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Casa Hammerby tagterrasse" loading="lazy"><div class="ps-label">Huset</div></div>
-<div class="ps-item"><img src="img/fornalutx-lg.jpg" srcset="img/fornalutx-sm.jpg 800w, img/fornalutx-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Fornalutx landsby" loading="lazy"><div class="ps-label">Steder</div></div>
-<div class="ps-item"><img src="img/mad-lg.jpg" srcset="img/mad-sm.jpg 800w, img/mad-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Mad i Fornalutx" loading="lazy"><div class="ps-label">Mad</div></div>
-<div class="ps-item"><img src="img/bike-lg.jpg" srcset="img/bike-sm.jpg 800w, img/bike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Sa Calobra cykelrute" loading="lazy"><div class="ps-label">Cykling</div></div>
-<div class="ps-item"><img src="img/hike-lg.jpg" srcset="img/hike-sm.jpg 800w, img/hike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Port de Sóller fra oven" loading="lazy"><div class="ps-label">Vandring</div></div>
+<div class="ps-item"><a href="img/house-lg.jpg" target="_blank"><img src="img/house-lg.jpg" srcset="img/house-sm.jpg 800w, img/house-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Casa Hammerby tagterrasse" loading="lazy"></a><div class="ps-label">Huset</div></div>
+<div class="ps-item"><a href="img/fornalutx-lg.jpg" target="_blank"><img src="img/fornalutx-lg.jpg" srcset="img/fornalutx-sm.jpg 800w, img/fornalutx-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Fornalutx landsby" loading="lazy"></a><div class="ps-label">Steder</div></div>
+<div class="ps-item"><a href="img/mad-lg.jpg" target="_blank"><img src="img/mad-lg.jpg" srcset="img/mad-sm.jpg 800w, img/mad-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Mad i Fornalutx" loading="lazy"></a><div class="ps-label">Mad</div></div>
+<div class="ps-item"><a href="img/bike-lg.jpg" target="_blank"><img src="img/bike-lg.jpg" srcset="img/bike-sm.jpg 800w, img/bike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Sa Calobra cykelrute" loading="lazy"></a><div class="ps-label">Cykling</div></div>
+<div class="ps-item"><a href="img/hike-lg.jpg" target="_blank"><img src="img/hike-lg.jpg" srcset="img/hike-sm.jpg 800w, img/hike-lg.jpg 1600w" sizes="(max-width: 700px) 100vw, 860px" alt="Port de Sóller fra oven" loading="lazy"></a><div class="ps-label">Vandring</div></div>
 </div>
 
 <div class="toc">
